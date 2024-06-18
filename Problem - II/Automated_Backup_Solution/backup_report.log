@@ -1,0 +1,2 @@
+INFO:root:2024-06-18 12:38:10.832634: Backup of /path/to/local/directory to remote.server.com:/path/to/remote/directory failed. Error: Command '['tar', 'czf', 'path_to_local_directory_20240618123810.tar.gz', '/path/to/local/directory']' returned non-zero exit status 1.
+INFO:root:2024-06-18 12:39:37.714529: Backup of /path/to/local/directory to remote.server.com:/path/to/remote/directory failed. Error: Command '['tar', 'czf', 'path_to_local_directory_20240618123937.tar.gz', '/path/to/local/directory']' returned non-zero exit status 1.

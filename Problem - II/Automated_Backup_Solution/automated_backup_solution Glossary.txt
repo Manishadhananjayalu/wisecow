@@ -1,0 +1,41 @@
+Instructions to Run the Script
+
+1)Install Dependencies:
+Ensure you have 'ssh' and 'scp' available on your system. You might need to install 'openssh-client' if it's not already installed.
+
+2)Configure Script:
+Update the 'LOCAL_DIR', 'REMOTE_USER', 'REMOTE_HOST', and 'REMOTE_DIR' variables in the script with your specific details.
+
+3)Run the Script:
+Save the script to a file, e.g., 'automated_backup.py', and run it using Python:
+python automated_backup.py
+
+Explanation
+
+1)Logging: 
+The script logs messages to a file named 'backup_report.log' using Python's built-in logging module.
+
+2)Functions:
+a)'log_message(message)': Logs a message with a timestamp.
+b)'backup_directory(local_dir, remote_user, remote_host, remote_dir)':
+i)Creates a compressed archive of the specified local directory.
+ii)Transfers the archive to the remote server using SCP.
+iii)Deletes the local archive after a successful transfer.
+iv)Logs success or failure messages.
+
+3)Main Section: 
+Contains the configuration for the local directory to be backed up and the remote server details.
+
+Automating the Script
+
+To run this script periodically, you can set up a cron job on a Unix-like system.
+
+1) Open Crontab:
+   crontab -e
+
+2) Add a Cron Job:
+Add a line to run the script at the desired interval. For example, to run the script daily at 2 AM:
+0 2 * * * /usr/bin/python3 /path/to/automated_backup.py
+
+
+This script will ensure that your specified directory is backed up to the remote server or cloud storage solution at regular intervals, and you will receive logs detailing the success or failure of each backup operation.

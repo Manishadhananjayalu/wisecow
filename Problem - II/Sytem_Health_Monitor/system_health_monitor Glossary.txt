@@ -1,0 +1,10 @@
+Explanation:
+
+1)Thresholds: CPU, memory, and disk usage thresholds are set to 80%.
+2)Logging: The script logs messages to a file named system_health.log using Python's built-in logging module.
+3)Functions:
+a)check_cpu_usage(): Checks the CPU usage and logs a message if it exceeds the threshold.
+b)check_memory_usage(): Checks the memory usage and logs a message if it exceeds the threshold.
+c)check_disk_usage(): Checks the disk usage and logs a message if it exceeds the threshold.
+d)log_running_processes(): Logs the currently running processes.
+4)Main Function: The main() function runs the above checks and logs the results.
